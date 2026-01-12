@@ -260,7 +260,7 @@ const TaskForm = ({ addTask, updateTask, editingTask, setEditingTask, onCancel }
       <div className="flex gap-3 pt-4 border-t">
         <button
           type="submit"
-          className="flex items-center justify-center gap-2 flex-1 bg-primary-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg"
+          className="flex items-center justify-center gap-2 flex-1 bg-primary-600 text-black py-3 px-6 rounded-lg font-medium hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg"
         >
           <BsSave />
           {editingTask ? 'Update Task' : 'Create Task'}

@@ -200,7 +200,7 @@ const App = () => {
                   </p>
                   <button
                     onClick={() => setShowForm(true)}
-                    className="w-full flex items-center justify-center gap-2 bg-primary-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-700 transition-colors"
+                    className="w-full flex items-center justify-center gap-2 bg-primary-600 text-black py-3 px-6 rounded-lg font-medium hover:bg-primary-700 transition-colors"
                   >
                     <BsPlus />
                     Create Your First Task
@@ -275,7 +275,7 @@ const App = () => {
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => setShowForm(true)}
-                        className="flex items-center gap-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+                        className="flex items-center gap-2 bg-primary-600 text-black px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
                       >
                         <BsPlus />
                         Add Task
