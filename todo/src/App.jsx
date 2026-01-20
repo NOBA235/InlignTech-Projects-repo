@@ -27,6 +27,11 @@ const App = () => {
   const [showForm, setShowForm] = useState(false);
   const [showSampleDataBtn, setShowSampleDataBtn] = useState(false);
 
+
+
+
+  
+
   /* -------------------- LOAD TASKS -------------------- */
   useEffect(() => {
     const savedTasks = loadFromLocalStorage('tasks') || [];
@@ -48,10 +53,9 @@ const App = () => {
       createdAt: new Date().toISOString(),
       completed: false
     };
-    setTasks(prev => [newTask, ...prev]);
+    setTasks(prev => [newTask, ...prev]);  
     setShowForm(false);
   };
-
   const updateTask = (updatedTask) => {
     setTasks(tasks.map(task =>
       task.id === updatedTask.id ? updatedTask : task
@@ -87,7 +91,7 @@ const App = () => {
 
   /* -------------------- FILTERS -------------------- */
   const filteredTasks = tasks.filter(task => {
-    if (filter === 'todo' && task.completed) return false;
+    if (filter === 'todo' && task.completed) return false; 
     if (filter === 'in-progress' && (task.completed || task.status !== 'in-progress')) return false;
     if (filter === 'done' && !task.completed) return false;
     if (category !== 'all' && task.category !== category) return false;
@@ -106,6 +110,7 @@ const App = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
 
       {/* Floating Button */}
+
       {!showForm && !editingTask && (
         <button
           onClick={() => setShowForm(true)}
@@ -213,7 +218,7 @@ const App = () => {
               />
             ) : (
               <div className="text-center py-16 text-gray-500">
-                <BsGrid3X3Gap className="text-6xl mx-auto mb-4" />
+                <BsGrid3X3Gap className="text-8xl mx-auto mb-4" />
                 No tasks found
               </div>
             )}
